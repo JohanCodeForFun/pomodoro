@@ -16,7 +16,7 @@ function displayCount() {
 
     displayPara.textContent = displayMinutes + ':' + displaySeconds;
 
-    secondCount++;
+    secondCount--;
 }
 
 const startBtn = document.querySelector('.start');
@@ -32,7 +32,7 @@ startBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     clearInterval(pomodoro);
     startBtn.disabled = false;
-    secondCount = 0;
+    secondCount = 1500;
     displayCount();
 });
 
