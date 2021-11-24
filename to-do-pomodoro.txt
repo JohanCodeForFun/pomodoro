@@ -13,4 +13,5 @@
     - add events for winding & ticking sounds to timer
     - add link to my portfolio site
     - upload to instagram to share my work
+    - gettig errors to push to git repo. why? how do I fix it?
     - 
