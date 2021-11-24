@@ -1,0 +1,45 @@
+.mainBackground  {
+    background-image: url(/images/hero.jpg);
+    background-size: cover;
+}
+
+
+div   {
+    text-align: center;
+    padding: 10px;
+}
+h1, h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+
+header {
+    background-color: saddlebrown;
+}
+header h1, header h2 {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+}
+header h1 {
+    padding: .5rem 0 0 0;
+    font-size: 2.1rem;
+}
+header h2 {
+    padding: .2rem 0 0 0;
+    font-size: 1.05rem;
+}
+
+
+footer  {
+    position: absolute;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    width: 100%;
+    text-decoration: #fff;
+    text-align: center;
+    background-color: saddlebrown;
+}
