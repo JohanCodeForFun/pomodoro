@@ -7,6 +7,7 @@
     - style footer, fixed height &  width
     - add link back to my personal website
     - add thank you for background image & links
+    - make the background image 80% smaller to increase load time
     - add transparent/gradient shadow to tomato
     - record winding sound & ticking sound
     - add events for winding & ticking sounds to timer
