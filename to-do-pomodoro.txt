@@ -1,0 +1,15 @@
+
+  TO DO Pomodoro
+
+    - change font text & color white
+    - style buttons, rounded corners 
+    - style background, responsive fullscreen background with no white borders
+    - style footer, fixed height &  width
+    - add link back to my personal website
+    - add thank you for background image & links
+    - add transparent/gradient shadow to tomato
+    - record winding sound & ticking sound
+    - add events for winding & ticking sounds to timer
+    - add link to my portfolio site
+    - upload to instagram to share my work
+    - 
