@@ -1,3 +1,6 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
 
 let secondCount = 1500;
 let pomodoro;
@@ -19,6 +22,7 @@ function displayCount() {
 const startBtn = document.querySelector('.start');
 const mute = document.querySelector('.mute');
 const resetBtn = document.querySelector('.reset');
+
 
 startBtn.addEventListener('click', () => {
     pomodoro = setInterval(displayCount, 1000);
