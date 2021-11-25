@@ -3,6 +3,10 @@
     background-size: cover;
 }
 
+img {
+    filter: drop-shadow(-16px 32px 16px black);
+}
+
 font {
     font-family: inherit;
     color: #fff;
@@ -39,7 +43,6 @@ header h2 {
 }
 
 button, .headerApp {
-    border: ;
     background-color: tomato;
     color: #fff;
     text-align: center;
@@ -56,15 +59,8 @@ button, .headerApp {
 
 }
 
-&:hover {
-    outline-style: solid;
-    
-    background-color: scale-color($btnColor, $lightness: -20%);
-}
-
-
 footer  {
-    position: absolute;
+
     bottom: 0;
     padding: 5px 0 5px 0;
     width: 100%;

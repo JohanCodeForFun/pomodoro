@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
 
+
 let secondCount = 1500;
 let pomodoro;
 const displayPara = document.querySelector('.clock');
