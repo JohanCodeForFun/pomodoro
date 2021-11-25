@@ -13,14 +13,21 @@
 
   Continued TO DO
 
-    - add function, after reset clicked, stop ticking sound
     - add function, after 25 minutes, play alarm
     - add function, mute/unmute sound
-    - 
+ 
+    Bugs,
+    - images loads on local, but not website
+      X change src "/file/image.jpg" to "file/image.jpg"
+    - ticking sound keeps playing after reset is clicked
+      - add function, after reset clicked, stop ticking sound
+    - background image does not load on local, but not website
+      - see how I can fix the css or change it
 
 
     - add link to my portfolio site
     - add thank you for background image & links
     - upload to instagram to share my work
     - gettig errors to push to git repo. why? how do I fix it?
+    - LEARN how to use git with vs code in the IDE for better workflow & save time.
  
