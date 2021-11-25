@@ -38,11 +38,48 @@ resetBtn.addEventListener('click', () => {
 
 displayCount();
 
-var audioElement = document.createElement('audio');
-    audioElement = setAttribute('src', '/media/winder.mp3');
 
-    function ResetAudio() {
-        audioElement.load;
-        audioElement.play();
+// audio file playback
+var audioFile = document.getElementById('audioFile')
+
+// JSON
+var albumList = {
+    "albums":[
+        {"winder":"media/winder.mp3"},
+        {"ticking":"media/ticking.mp3"},
+        {"alarm":"media/alarm.mp3"},
+    ]
+}
+
+// Load
+audioFile.onloadedmetadata = function() {
+    loadAlbum(currentAlbum)
+}
+
+function loadAlbum(e){
+
+}
+
+
+
+
+    function resetAudio(){
+        audioReset.play();
     }
 
+    function playAudio(){
+        if (audioFile.paused) {
+            audioFile.play();
+        } else{
+            audioFile.paused();
+        }
+    }
+
+    function muteAudio(){
+        alert('Mute')
+    }
+
+    // ended
+    audioFile.onended = function() {
+        alert('Audio has ended');
+    }
