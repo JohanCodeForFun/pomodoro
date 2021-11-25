@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
 
-
 let secondCount = 1500;
 let pomodoro;
 const displayPara = document.querySelector('.clock');
@@ -38,4 +37,12 @@ resetBtn.addEventListener('click', () => {
 });
 
 displayCount();
+
+var audioElement = document.createElement('audio');
+    audioElement = setAttribute('src', '/media/winder.mp3');
+
+    function ResetAudio() {
+        audioElement.load;
+        audioElement.play();
+    }
 
