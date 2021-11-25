@@ -1,6 +1,11 @@
 .mainBackground  {
-    background-image: url(/images/hero.jpg);
+    background-image: url(/images/hero-1140px.jpg);
     background-size: cover;
+}
+
+font {
+    font-family: inherit;
+    color: #fff;
 }
 
 
@@ -31,6 +36,30 @@ header h1 {
 header h2 {
     padding: .2rem 0 0 0;
     font-size: 1.05rem;
+}
+
+button, .headerApp {
+    border: ;
+    background-color: tomato;
+    color: #fff;
+    text-align: center;
+    line-height: 1.1;
+    padding: .25em .75em;
+    min-width: 10ch;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px black;
+    transition: 220ms  all ease-in-out;
+
+}
+
+&:hover {
+    outline-style: solid;
+    
+    background-color: scale-color($btnColor, $lightness: -20%);
 }
 
 
