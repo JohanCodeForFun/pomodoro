@@ -1,17 +1,26 @@
 
   TO DO Pomodoro
 
-    - change font text & color white
-    - style buttons, rounded corners 
-    - style background, responsive fullscreen background with no white borders
-    - style footer, fixed height &  width
-    - add link back to my personal website
-    - add thank you for background image & links
-    X make the background image 80% smaller to increase load time
-    - add transparent/gradient shadow to tomato
-    - record winding sound & ticking sound
-    - add events for winding & ticking sounds to timer
+    X change font text & color white
+    X style buttons, rounded corners 
+    X style footer, fixed height &  width
+    X make the background image 80% smaller to increase load time, from 2.44mb to 37.5kb!
+    X add transparent/gradient shadow to tomato >> use drop shadow
+    X record winding sound & ticking sound >> download from internet
+    X add events for winding & ticking sounds to timer
+
+    !!! Great Work Johan! Much better now with working sound, and good enough graphics!
+
+  Continued TO DO
+
+    - add function, after reset clicked, stop ticking sound
+    - add function, after 25 minutes, play alarm
+    - add function, mute/unmute sound
+    - 
+
+
     - add link to my portfolio site
+    - add thank you for background image & links
     - upload to instagram to share my work
     - gettig errors to push to git repo. why? how do I fix it?
-    - 
+ 

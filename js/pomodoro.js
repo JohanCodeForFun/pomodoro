@@ -40,7 +40,7 @@ displayCount();
 
 
 // audio file playback
-var audioFile = document.getElementById('audioFile')
+var audioFile = document.getElementById('audioStart')
 
 // JSON
 var albumList = {
@@ -53,7 +53,6 @@ var albumList = {
 
 // Load
 audioFile.onloadedmetadata = function() {
-    loadAlbum(currentAlbum)
 }
 
 function loadAlbum(e){
@@ -65,18 +64,28 @@ function loadAlbum(e){
 
     function resetAudio(){
         audioReset.play();
+        if (audioStart.play) {
+            audioStart.paused();
+            // I don't know how to call/paus ticking sound
+        }
     }
 
     function playAudio(){
-        if (audioFile.paused) {
-            audioFile.play();
+        if (audioStart.paused) {
+            audioStart.play();
         } else{
-            audioFile.paused();
+            audioStart.paused();
         }
     }
 
     function muteAudio(){
-        alert('Mute')
+        if (muteAudio.muted) {
+            volume.value = 0;
+            muteAudio.innerText = 'Unmute';
+        } else {
+            volume.value = vol;
+            muteAudio.innerText = 'Mute';
+        }
     }
 
     // ended

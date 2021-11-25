@@ -18,11 +18,10 @@
                 <P><H3 class="clock"></H3></P>
 
                 <p>
-                    <audio id="audioFile">
-                        <source id="audioStart" src="/media/ticking.mp3" type="audio/mpeg">
-                        <source id="audioAlarm" src="/media/alarm.mp3" type="audio/mpeg">
-                        <source id="audioReset" src="/media/winder.mp3" type="audio/mpeg">
-                    </audio>
+                    <audio id="audioStart" loop src="/media/ticking.mp3" type="audio/mpeg"></audio>
+                    <audio id="audioAlarm" src="/media/alarm.mp3" type="audio/mpeg"></audio>
+                    <audio id="audioReset" src="/media/winder.mp3" type="audio/mpeg"></audio>
+
                     <BUTTON class="start" onclick="playAudio()"><H3>START</H3></BUTTON> 
                     <button class="reset" onclick="resetAudio()">RESET</button>
                     <BUTTON class="mute" onclick="muteAudio()">SOUND/MUTE</BUTTON>
