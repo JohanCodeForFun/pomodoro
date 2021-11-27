@@ -20,12 +20,13 @@ function displayCount() {
 }
 
 const startBtn = document.querySelector('.start');
-const mute = document.querySelector('.mute');
+const muteBtn = document.querySelector('.mute');
 const resetBtn = document.querySelector('.reset');
 
 
 startBtn.addEventListener('click', () => {
     pomodoro = setInterval(displayCount, 1000);
+    audioStart.play();
     startBtn.disabled = true;
 });
 
@@ -34,26 +35,24 @@ resetBtn.addEventListener('click', () => {
     startBtn.disabled = false;
     secondCount = 1500;
     displayCount();
+    audioStart.pause();
+    audio.currentTime = 0;
+    audioReset.play();
 });
 
+muteBtn.addEventListener('click', () => {
+    if (muteAudio.muted) {
+        volume.value = 0;
+        muteAudio.innerText = 'Unmute';
+    } else {
+        volume.value = vol;
+        muteAudio.innerText = 'Mute';
+    }
+});
+
+
+
 displayCount();
-
-
-// audio file playback
-var audioFile = document.getElementById('audioStart')
-
-// JSON
-var albumList = {
-    "albums":[
-        {"winder":"media/winder.mp3"},
-        {"ticking":"media/ticking.mp3"},
-        {"alarm":"media/alarm.mp3"},
-    ]
-}
-
-// Load
-//audioFile.onloadedmetadata = function() {
-//}
 
 
     function resetAudio(){
@@ -73,14 +72,9 @@ var albumList = {
     }
 
     function muteAudio(){
-        if (muteAudio.muted) {
-            volume.value = 0;
-            muteAudio.innerText = 'Unmute';
-        } else {
-            volume.value = vol;
-            muteAudio.innerText = 'Mute';
+
         }
-    }
+  
 
     // ended
     //audioFile.onended = function() {
