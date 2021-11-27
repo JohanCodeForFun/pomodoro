@@ -17,10 +17,15 @@
     - add function, mute/unmute sound
  
     Bugs,
-    - images loads on local, but not website
+    - background image  loads on local, but not website
       X change src "/file/image.jpg" to "file/image.jpg"
-    - ticking sound keeps playing after reset is clicked
-      - add function, after reset clicked, stop ticking sound
+         - it didn't fix the problem
+    X ticking sound keeps playing after reset is clicked
+      X add function, after reset clicked, stop ticking sound
+        >> DONE!
+    - Mute works, unmute does NOT. 
+       - Fix unmute sound
+       - Add .innertext change, mute/unmute
     - background image does not load on local, but not website
       - see how I can fix the css or change it
 

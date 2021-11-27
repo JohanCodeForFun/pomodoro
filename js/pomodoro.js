@@ -19,9 +19,15 @@ function displayCount() {
     secondCount--;
 }
 
+displayCount();
+
+
+// button functions
+
 const startBtn = document.querySelector('.start');
 const muteBtn = document.querySelector('.mute');
 const resetBtn = document.querySelector('.reset');
+let volume = muteBtn;
 
 
 startBtn.addEventListener('click', () => {
@@ -36,47 +42,24 @@ resetBtn.addEventListener('click', () => {
     secondCount = 1500;
     displayCount();
     audioStart.pause();
-    audio.currentTime = 0;
     audioReset.play();
 });
 
 muteBtn.addEventListener('click', () => {
-    if (muteAudio.muted) {
+    if (!audioStart.muted) {
+        vol = volume.value;
+        // tror det är fel knapp innertxt
+        audioStart.muted = !audioStart.muted;
+    }
+
+    if (audioStart.muted) {
         volume.value = 0;
-        muteAudio.innerText = 'Unmute';
-    } else {
+        muteId.innertext = 'Unmute';
+    }
+        else {
         volume.value = vol;
-        muteAudio.innerText = 'Mute';
+        muteId.innerText = 'Mute';
     }
 });
 
 
-
-displayCount();
-
-
-    function resetAudio(){
-        audioReset.play();
-        if (audioStart.play) {
-            audioStart.paused();
-            // I don't know how to call/paus ticking sound
-        }
-    }
-
-    function playAudio(){
-        if (audioStart.paused) {
-            audioStart.play();
-        } else{
-            audioStart.paused();
-        }
-    }
-
-    function muteAudio(){
-
-        }
-  
-
-    // ended
-    //audioFile.onended = function() {
-    //    alert('Audio has ended');
-    //}
