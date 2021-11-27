@@ -52,14 +52,8 @@ var albumList = {
 }
 
 // Load
-audioFile.onloadedmetadata = function() {
-}
-
-function loadAlbum(e){
-
-}
-
-
+//audioFile.onloadedmetadata = function() {
+//}
 
 
     function resetAudio(){
@@ -89,6 +83,6 @@ function loadAlbum(e){
     }
 
     // ended
-    audioFile.onended = function() {
-        alert('Audio has ended');
-    }
+    //audioFile.onended = function() {
+    //    alert('Audio has ended');
+    //}
