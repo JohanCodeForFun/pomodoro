@@ -32,6 +32,8 @@ let volume = muteBtn;
 
 startBtn.addEventListener('click', () => {
     pomodoro = setInterval(displayCount, 1000);
+    audioReset.pause();
+    audioReset.currentTime = 0;
     audioStart.play();
     startBtn.disabled = true;
 });
@@ -42,23 +44,26 @@ resetBtn.addEventListener('click', () => {
     secondCount = 1500;
     displayCount();
     audioStart.pause();
+    audioStart.currentTime = 0;
     audioReset.play();
 });
 
 muteBtn.addEventListener('click', () => {
+
     if (!audioStart.muted) {
         vol = volume.value;
         // tror det är fel knapp innertxt
-        audioStart.muted = !audioStart.muted;
     }
+
+    audioStart.muted = !audioStart.muted;
 
     if (audioStart.muted) {
         volume.value = 0;
-        muteId.innertext = 'Unmute';
+        muteBtn.innerText = 'Unmute';
     }
         else {
         volume.value = vol;
-        muteId.innerText = 'Mute';
+        muteBtn.innerText = 'Mute sound';
     }
 });
 
