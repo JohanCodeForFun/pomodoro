@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
 
-let secondCount = 1500;
+let secondCount = 5;
 let pomodoro;
 const displayPara = document.querySelector('.clock');
 
@@ -16,7 +16,15 @@ function displayCount() {
 
     displayPara.textContent = displayMinutes + ':' + displaySeconds;
 
-    secondCount--;
+    //Ended, play alarm
+    if (secondCount !== 0) {
+        secondCount--;
+    } else {
+        audioAlarm.loop = false;
+        audioAlarm.play();
+        audioStart.pause();
+        audioStart.currentTime = 0;
+    }
 }
 
 displayCount();
@@ -29,7 +37,6 @@ const muteBtn = document.querySelector('.mute');
 const resetBtn = document.querySelector('.reset');
 let volume = muteBtn;
 
-
 startBtn.addEventListener('click', () => {
     pomodoro = setInterval(displayCount, 1000);
     audioReset.pause();
@@ -41,9 +48,10 @@ startBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     clearInterval(pomodoro);
     startBtn.disabled = false;
-    secondCount = 1500;
+    secondCount = 5;
     displayCount();
     audioStart.pause();
+    audioAlarm.pause();
     audioStart.currentTime = 0;
     audioReset.play();
 });
@@ -52,7 +60,6 @@ muteBtn.addEventListener('click', () => {
 
     if (!audioStart.muted) {
         vol = volume.value;
-        // tror det är fel knapp innertxt
     }
 
     audioStart.muted = !audioStart.muted;
@@ -63,7 +70,7 @@ muteBtn.addEventListener('click', () => {
     }
         else {
         volume.value = vol;
-        muteBtn.innerText = 'Mute sound';
+        muteBtn.innerText = 'Mute ticking';
     }
 });
 
