@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
 
-let secondCount = 5;
+let secondCount = 1500;
 let pomodoro;
 const displayPara = document.querySelector('.clock');
 
@@ -20,6 +20,7 @@ function displayCount() {
     if (secondCount !== 0) {
         secondCount--;
     } else {
+        // BUG, audio alarm loops
         audioAlarm.loop = false;
         audioAlarm.play();
         audioStart.pause();
@@ -48,7 +49,7 @@ startBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     clearInterval(pomodoro);
     startBtn.disabled = false;
-    secondCount = 5;
+    secondCount = 1500;
     displayCount();
     audioStart.pause();
     audioAlarm.pause();
